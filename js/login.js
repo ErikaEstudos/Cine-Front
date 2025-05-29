@@ -1,3 +1,5 @@
+const BACKEND_URL = "cine-back-gzmysutkp-erika-oliveiras-projects.vercel.app";
+
 // Seleção de Elementos do DOM
 const btnLogin = document.querySelector(".btn-login");
 const tagBody = document.querySelector("body");
@@ -113,7 +115,7 @@ formLoginSignup.addEventListener("submit", async function (event) {
 
   // Envio dos dados para o backend
   try {
-    const response = await fetch("http://localhost:3000/usuarios", {
+    const response = await fetch(`${BACKEND_URL}/usuarios`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -148,7 +150,7 @@ formLogin.addEventListener("submit", async function (e) {
 
   // Envio dos dados para o backend (API) de login
   try {
-    const response = await fetch("http://localhost:3000/usuarios/login", {
+    const response = await fetch(`${BACKEND_URL}/usuarios/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, senha }),
@@ -214,7 +216,7 @@ async function carregarUsuarios() {
   const lista = document.getElementById("lista-usuarios");
   if (!lista) return; // Se a lista não existir, sai da função
   try {
-    const res = await fetch("http://localhost:3000/usuarios"); //Busca usuários do backend
+    const res = await fetch(`${BACKEND_URL}/usuarios`); //Busca usuários do backend
     const usuarios = await res.json();
     lista.innerHTML = ""; // Limpa a lista antes de adicionar os usuários
 
@@ -240,7 +242,7 @@ async function carregarUsuarios() {
 // Função para deletar um usuário
 async function deletarUsuario(id) {
   try {
-    await fetch(`http://localhost:3000/usuarios/${id}`, { method: "DELETE" });
+    await fetch(`${BACKEND_URL}/usuarios/${id}`, { method: "DELETE" });
     carregarUsuarios(); // Atualiza a lista de usuários após a exclusão
   } catch (error) {
     console.error("Erro ao deletar:", error);
@@ -332,14 +334,11 @@ document
 
     if (usuario) {
       try {
-        const response = await fetch(
-          `http://localhost:3000/usuarios/${usuario._id}`,
-          {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nome, email }),
-          }
-        );
+        const response = await fetch(`${BACKEND_URL}/usuarios/${usuario._id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nome, email }),
+        });
 
         if (response.ok) {
           // Atualização bem-sucedida
@@ -390,7 +389,7 @@ document
     if (usuario) {
       try {
         const response = await fetch(
-          `http://localhost:3000/usuarios/${usuario._id}/senha`,
+          `${BACKEND_URL}/usuarios/${usuario._id}/senha`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
