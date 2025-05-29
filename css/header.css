@@ -1,0 +1,211 @@
+.main-header {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-image: linear-gradient(180deg, rgb(246, 78, 81), rgb(76, 74, 74));
+}
+.main-header .nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  position: relative;
+}
+
+/*RESPONSIVO*/
+
+/*botão portfolio*/
+.nav-main .btn-portfolio img {
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.nav-main .btn-portfolio img:hover {
+  transform: scale(1.03);
+  background-color: cyan;
+  box-shadow: 0px 0px 5px cyan, 0px 0px 10px cyan, 0px 0px 20px cyan;
+}
+
+.nav-main .img_popcorn {
+  width: 100px;
+  height: 70px;
+}
+
+.nav-main .box-main_cineErika {
+  width: 60%;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.box-main_cineErika .cinErika {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black, 0px 0px 20px black;
+  transition: 0.2s ease-in-out;
+}
+
+.cinErika:hover {
+  box-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0 0 30px cyan;
+}
+
+/*botão login*/
+.nav-main .itens-btn_login {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.itens-btn_login .btn-login {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: 200ms ease-in-out;
+}
+
+.itens-btn_login .btn-login:hover {
+  transform: scale(1.03);
+  background-color: cyan;
+  box-shadow: 0px 0px 5px cyan, 0px 0px 10px cyan, 0px 0px 20px cyan;
+}
+
+.itens-btn_login .login_cadastro {
+  font-size: 16px;
+  color: #fff;
+  max-width: 100px;
+  width: 100%;
+}
+/*---ESTRUTURA DO BTN MINHA CONTA---*/
+.box-minha_conta {
+  max-width: 145px;
+  width: 100%;
+  position: relative;
+  gap: 5px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.box-minha_conta .ola-usuario {
+  width: 100%;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.btn-minha_conta,
+.boas-vindas {
+  padding: 0 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.box-minha_conta .btn-minha_conta {
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.box-minha_conta .btn-minha_conta:hover {
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px 0px 10px cyan;
+  background-color: #75231c;
+}
+
+.active {
+  border-radius: 10px 10px 0 0;
+  background-color: #e44747 !important;
+  border: 1px solid black !important;
+}
+
+.btn-minha_conta .img-seta {
+  width: 20px;
+  height: 20px;
+  transform: translateY(2px);
+  transition: all 0.3s ease-in-out;
+}
+.btn-minha_conta.active .img-seta {
+  transform: rotateZ(180deg);
+}
+.btn-minha_conta.active + .box-dropdow {
+  height: 70px;
+  visibility: visible;
+}
+/*CAIXA DROPDOW*/
+.box-minha_conta .box-dropdow {
+  width: 100%;
+  height: 0;
+  padding: 5px 10px;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #e44747;
+  border: 1px solid black;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.box-dropdow .btn-editar_conta,
+.btn_logout {
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 16px;
+  display: none;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+.btn-editar_conta:hover,
+.btn_logout:hover {
+  color: cyan;
+}
+.box-dropdow img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 767px) {
+  .nav-main .box-main_cineErika {
+    height: 80px;
+    width: 50%;
+  }
+  .box-main_cineErika .cinErika {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-header .nav-main {
+    height: 150px;
+    align-items: end;
+  }
+  .nav-main .box-main_cineErika {
+    width: 90%;
+    position: absolute;
+    top: 0;
+  }
+  .nav-main .btn-login {
+    width: 45px;
+    height: 45px;
+  }
+}

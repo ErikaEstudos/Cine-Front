@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projeto Cine Erika, Portfólio de Erika Araujo de Oliveira Correa, desenvolvedora Frontend especializado em HTML, CSS e JavaScript e outros. Confira meus projetos focados em design responsivo, interatividade e experiência do usuário."
+    />
+    <meta
+      name="keywords"
+      content="Desenvolvedora Frontend, HTML, CSS, JavaScript, Portfólio, Web Design, Responsividade, UX/UI, Projetos Web, Programação, Frontend Developer, Design Responsivo, Interatividade, Web Development"
+    />
+    <meta name="author" content="Erika Araujo de Oliveira Correa" />
+    <meta name="theme-color" content="#f64e51" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Erika Oliveira | CINE ERIKA</title>
+  </head>
+
+  <link rel="stylesheet" href="../css/body.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/formCadastrarLogin.css" />
+  <link rel="stylesheet" href="../css/formMinhaconta.css" />
+  <link rel="stylesheet" href="../css/slider.css" />
+  <link rel="stylesheet" href="../css/trailer.css" />
+  <link rel="stylesheet" href="../css/cards.css" />
+  <!-- <link rel="stylesheet" href="../css/star.css" /> -->
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+
+  <body>
+    <header class="main-header">
+      <nav class="nav-main">
+        <!----ATENÇÃO: ABAIXO COLOCAR O CAMINHO PARA O PORTIFÓLIO!!!!!----->
+        <div class="box-exit">
+          <a
+            class="btn-portfolio"
+            id="portfolio"
+            href="#CAMINHO PARA O PORTIFÓLIO"
+          >
+            <img
+              src="./../assets/img/GERAL/SAÍDA.webp"
+              alt="imagem botão SAÍDA"
+            />
+          </a>
+
+          <img
+            class="img_popcorn"
+            src="../assets/img/cinema/PIPOCA-2.webp"
+            alt="imagem de pipoca de cinema"
+          />
+        </div>
+
+        <a class="box-main_cineErika" href="index.html"
+          ><img
+            class="cinErika"
+            src="./../assets/img/GERAL/CINE-ERIKA2.webp"
+            alt="imagem logo Cine Erika"
+        /></a>
+        <!--ESTRUTURA DO BOTÃO DE LOGIN-->
+        <div class="itens-btn_login">
+          <label for="login">
+            <img
+              class="btn-login"
+              src="../assets/img/GERAL/img-login.webp"
+              alt="imagem de ícone de login"
+            />
+          </label>
+          <span class="login_cadastro">Olá, Visitante!</span>
+        </div>
+        <!--ESTRUTURA DO BOTÃO MINHA CONTA-->
+        <div class="box-minha_conta">
+          <span class="ola-usuario"></span>
+
+          <button class="btn-minha_conta">
+            Minha Conta
+            <img
+              class="img-seta"
+              src="../assets/img/GERAL/seta-branca.webp"
+              alt=""
+            />
+          </button>
+
+          <div class="box-dropdow">
+            <button class="btn-editar_conta" id="minha-conta">
+              <img src="../assets/img/GERAL/icons8-lápis-24.webp" alt="" />
+              Editar
+            </button>
+            <button class="btn_logout" id="logout">
+              <img src="../assets/img/GERAL/icons8-botão-sair-24.webp" alt="" />
+              Sair
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <section class="section-popup_Conta">
+        <div class="box-form_conta">
+          <label class="btn-fechar_conta" for="conta">X</label>
+          <h2 class="text-meus_dados">Alterar Dados</h2>
+          <form class="form-conta" action="" method="POST">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" required />
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required />
+            <div class="box-btns_formConta">
+              <button type="submit">Confirmar</button>
+            </div>
+          </form>
+          <div class="box-form_senha">
+            <h2 class="text-alterar_senha" id="btn-alterarSenha">
+              Alterar Senha
+            </h2>
+            <form class="form-senha" action="" method="POST">
+              <img
+                class="img-olho"
+                id="olho-fechado_formSenha"
+                src="../assets/img/GERAL/olho-fechado.webp"
+                alt="icone olho fechado"
+              />
+              <label for="senha-atual">Senha Atual</label>
+              <input
+                class="input-toggle_type"
+                type="password"
+                id="senha-atual"
+                name="senha-atual"
+                required
+              />
+              <label for="nova-senha">Nova Senha</label>
+              <input
+                class="input-toggle_type"
+                type="password"
+                id="nova-senha"
+                name="nova-senha"
+                required
+              />
+              <label for="confirmar-senha">Confirmar Senha</label>
+              <input
+                class="input-toggle_type"
+                type="password"
+                id="confirmar-senha"
+                name="confirmar-senha"
+                required
+              />
+              <div class="box-btn_senha">
+                <button class="btns-senha" type="submit" id="btn-confirmar">
+                  Confirmar
+                </button>
+
+                <span class="btns-senha btn-fechar_senha">Voltar</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <input type="checkbox" id="login" hidden />
+      <section class="section-login">
+        <div class="box-wrapper_dataBase">
+          <div class="wrapper">
+            <div class="form signup">
+              <label class="btn-fechar" for="login">X</label>
+              <div class="box-span">
+                <span>Inscrição</span>
+              </div>
+              <form class="form_cadastrar" action="" method="POST">
+                <input
+                  type="text"
+                  id="cadastrar-nome"
+                  minlength="3"
+                  maxlength="150"
+                  required
+                  placeholder=""
+                />
+                <label class="form_label" for="cadastrar-nome">Nome</label>
+                <input type="email" required placeholder="" />
+                <label class="form_label" for="email">Email</label>
+                <input
+                  type="password"
+                  id="input-signup"
+                  required
+                  placeholder=""
+                />
+                <label class="form_label" for="senha">Senha</label>
+                <img
+                  class="img-olho-signup"
+                  id="olho-signup"
+                  src="../assets/img/GERAL/olho-fechado.webp"
+                  alt="icone olho fechado"
+                />
+                <div class="checkbox">
+                  <input type="checkbox" id="signupCheck" required />
+                  <label for="signupCheck"
+                    >Aceito os termos e condições!
+                  </label>
+                  <a href="termos.html" target="_blank"
+                    ><abbr title="Click para ver Termos e Condições">i</abbr>
+                  </a>
+                </div>
+                <input
+                  disabled
+                  class="default"
+                  type="submit"
+                  id="btn-cadastrar"
+                  value="Cadastre-se"
+                />
+              </form>
+            </div>
+            <div class="form login">
+              <div class="box-span">
+                <span>Login</span>
+              </div>
+              <form class="form_login" action="" method="POST">
+                <input type="email" placeholder="" required />
+                <label class="form_label">Email</label>
+                <input
+                  type="password"
+                  id="input-login"
+                  placeholder=""
+                  required
+                />
+                <label class="form_label">Senha</label>
+                <img
+                  class="img-olho-login"
+                  id="olho-login"
+                  src="../assets/img/GERAL/olho-fechado.webp"
+                  alt="icone olho fechado"
+                />
+                <p>Esqueceu a Senha? <a href="#">Click Aqui!</a></p>
+
+                <input type="submit" value="Login" />
+              </form>
+            </div>
+
+            <div class="box-text_signup">
+              <span class="text-signup"></span>
+            </div>
+          </div>
+
+          <div class="box_dataBase">
+            <div class="dataBase_itens">
+              <h1 class="text_dataBase">Demo Database</h1>
+              <img
+                class="icone_dataBase"
+                src="../assets/img/GERAL/icons8-banco-de-dados.gif"
+                alt="icone de banco de dados"
+              />
+            </div>
+
+            <div>
+              <div class="box-demo_dataBase" id="lista-usuarios"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-----SLIDER MAIN E MOBILE (IMG)-->
+    <section class="slider">
+      <div class="slider-content">
+        <input type="radio" name="btn-radio" id="radio1" />
+        <input type="radio" name="btn-radio" id="radio2" />
+        <input type="radio" name="btn-radio" id="radio3" />
+
+        <div class="slider-box primeiro">
+          <img
+            class="img-desktop"
+            src="./../assets/img/slid/Vingadores.webp"
+            alt="imagem do filme vingadores"
+          />
+        </div>
+
+        <div class="slider-box">
+          <img
+            class="img-desktop"
+            src="./../assets/img/slid/the boys.webp"
+            alt="imagem do filme the boys"
+          />
+        </div>
+
+        <div class="slider-box">
+          <img
+            class="img-desktop"
+            src="./../assets/img/slid/marvel.webp"
+            alt="imagem de super herois"
+          />
+        </div>
+
+        <div class="nav-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+        </div>
+
+        <div class="nav-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+        </div>
+      </div>
+    </section>
+
+    <!--SESSÃO DE CARDS ------------>
+
+    <section class="section-cards" id="section-cards">
+      <div class="box-title_main">
+        <p class="main-title">
+          <span class="title-span">
+            🎥Obrigada por Vir 🎬 Faça Login 🍿 Assista o Trailer ⭐ e Avalie!
+          </span>
+        </p>
+        <img
+          class="img-projetor"
+          loading="lazy"
+          src="../assets/img/cinema/projetor.gif"
+          alt="imagem de projetor de cinema"
+        />
+      </div>
+      <div class="box-cards">
+        <div class="cards01">
+          <!----CARD CAPTÃ MARVEL------->
+          <figure class="cards" data-filme="Captã Marvel">
+            <img
+              class="img-card"
+              loading="lazy"
+              src="../assets/img/CAPA/SUPER HEROIS/capitaMarvel.jpg"
+              alt="imagem da captã marvel"
+            />
+            <!---------------TRAILER CAPTÃ MARVEL---------->
+            <section class="trailer trailer-captaMarvel">
+              <img
+                loading="lazy"
+                class="img-exit_trailer"
+                src="./../assets/img/GERAL/SAÍDA.webp"
+                alt="imagem botão SAÍDA"
+              />
+
+              <video
+                id="videoTrailer"
+                src="../assets/VIDEOS/SUPER-HEROIS/Capita Marvels.mp4"
+                poster="../assets/img/cinema/captã marvel2.webp"
+                controls
+                loop
+                muted
+              ></video>
+              <abbr title="Proibido Filmar!">
+                <img
+                  loading="lazy"
+                  class="img-proibido"
+                  src="../assets/img/cinema/proibido.webp"
+                  alt="imagem de proibido filmar"
+                />
+              </abbr>
+            </section>
+
+            <!------------------SINOPSE CAPTÃ MARVEL------------>
+            <figcaption class="box-sinopse sinopse-capta_marvel">
+              <div class="box-btn_span">
+                <button class="fechar fecharX">X</button>
+                <span>SINOPSE</span>
+              </div>
+
+              <p class="texto-sinopse">
+                Capitã Marvel: Carol Danvers descobre seu verdadeiro passado
+                enquanto se torna uma das heroínas mais poderosas do universo.
+                Em meio a uma guerra entre alienígenas, ela precisa dominar seus
+                poderes e encontrar seu lugar na Terra.
+              </p>
+              <div class="box-btn_cards">
+                <button class="btn-card btn-avaliar fosco" disabled>
+                  AVALIAR
+                </button>
+                <button class="btn-card btn-trailer">TRAILER</button>
+                <button class="btn-card btn-open_editar">EDITAR</button>
+              </div>
+            </figcaption>
+            <!----------------AVALIAÇÃO- CAPTÃ MARVEL- -001--------------->
+
+            <section class="section-star section-star_captaMarvel">
+              <div class="container">
+                <div class="post">
+                  <p class="text">Obrigado por Avaliar!</p>
+                </div>
+                <div class="star-widget">
+                  <input
+                    type="radio"
+                    name="capta-marvel"
+                    id="star-captaMarvel_5"
+                  />
+                  <label for="star-captaMarvel_5" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="capta-marvel"
+                    id="star-captaMarvel_4"
+                  />
+                  <label for="star-captaMarvel_4" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="capta-marvel"
+                    id="star-captaMarvel_3"
+                  />
+                  <label for="star-captaMarvel_3" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="capta-marvel"
+                    id="star-captaMarvel_2"
+                  />
+                  <label for="star-captaMarvel_2" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="capta-marvel"
+                    id="star-captaMarvel_1"
+                  />
+                  <label for="star-captaMarvel_1" class="fas fa-star"></label>
+                  <form action="#" method="#">
+                    <header></header>
+                    <div class="textarea">
+                      <textarea
+                        cols="10"
+                        placeholder="Descreva sua experiência..."
+                      ></textarea>
+                    </div>
+                    <div class="btn">
+                      <button class="btn-submit" type="submit">Postar</button>
+                      <button class="btn-editar" type="submit">Editar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </figure>
+
+          <!-----CARD HOMEM ARANHA--------->
+          <figure class="cards" data-filme="Homem Aranha">
+            <img
+              loading="lazy"
+              class="img-card"
+              src="../assets/img/CAPA/SUPER HEROIS/homemAranha.jpg"
+              alt="imagem do homem aranha"
+            />
+
+            <!------TRAILER HOMEM ARANHA--------->
+            <section class="trailer trailer-homemAranha">
+              <img
+                loading="lazy"
+                class="img-exit_trailer"
+                src="./../assets/img/GERAL/SAÍDA.webp"
+                alt="imagem botão SAÍDA"
+              />
+
+              <video
+                id="videoTrailer"
+                src="../assets/VIDEOS/SUPER-HEROIS/Homem-Aranha.mp4"
+                poster="../assets/img/cinema/homem Aranha2.webp"
+                controls
+                loop
+                muted
+              ></video>
+              <abbr title="Proibido Filmar!">
+                <img
+                  loading="lazy"
+                  class="img-proibido"
+                  src="../assets/img/cinema/proibido.webp"
+                  alt="imagem de proibido filmar"
+                />
+              </abbr>
+            </section>
+            <!------------------SESSÃO SINOPSE------------>
+            <figcaption class="box-sinopse sinopse-homem_aranha">
+              <div class="box-btn_span">
+                <button class="fechar fecharX">X</button>
+                <span>SINOPSE</span>
+              </div>
+              <p class="texto-sinopse">
+                Homem-Aranha: Sem Volta Para Casa – Após ter sua identidade
+                revelada ao mundo, Peter Parker busca a ajuda do Doutor Estranho
+                para restaurar seu anonimato. No entanto, o feitiço sai do
+                controle e acaba abrindo portais para vilões de outras
+                realidades.
+              </p>
+              <div class="box-btn_cards">
+                <button class="btn-card btn-avaliar fosco" disabled>
+                  AVALIAR
+                </button>
+                <button class="btn-card btn-trailer">TRAILER</button>
+                <button class="btn-card btn-open_editar">EDITAR</button>
+              </div>
+            </figcaption>
+            <!----------------SESSÃO AVALIAÇÃO--HOMEM ARANHA-- 002-------------->
+
+            <section class="section-star section-star_homemAranha">
+              <div class="container">
+                <div class="post">
+                  <p class="text">Obrigado por Avaliar!</p>
+                </div>
+                <div class="star-widget">
+                  <input
+                    type="radio"
+                    name="homem-aranha"
+                    id="star-homemAranha_5"
+                  />
+                  <label for="star-homemAranha_5" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="homem-aranha"
+                    id="star-homemAranha_4"
+                  />
+                  <label for="star-homemAranha_4" class="fas fa-star"></label>
+
+                  <input
+                    type="radio"
+                    name="homem-aranha"
+                    id="star-homemAranha_3"
+                  />
+                  <label for="star-homemAranha_3" class="fas fa-star"></label>
+
+                  <input
+                    type="radio"
+                    name="homem-aranha"
+                    id="star-homemAranha_2"
+                  />
+                  <label for="star-homemAranha_2" class="fas fa-star"></label>
+
+                  <input
+                    type="radio"
+                    name="homem-aranha"
+                    id="star-homemAranha_1"
+                  />
+                  <label for="star-homemAranha_1" class="fas fa-star"></label>
+                  <form action="#" method="#">
+                    <header></header>
+                    <div class="textarea">
+                      <textarea
+                        cols="10"
+                        placeholder="Descreva sua experiência..."
+                      ></textarea>
+                    </div>
+                    <div class="btn">
+                      <button class="btn-submit" type="submit">Postar</button>
+                      <button class="btn-editar" type="submit">Editar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </figure>
+        </div>
+        <div class="cards01">
+          <!-- CARD MULHER MARAVILHA----->
+          <figure class="cards" data-filme="Mulher Maravilha">
+            <img
+              loading="lazy"
+              class="img-card"
+              src="../assets/img/CAPA/SUPER HEROIS/mulherMaravilha.jpg"
+              alt="imagem da mulher maravilha"
+            />
+            <!-------TRAILER MULHER MARAVILHA-------->
+            <section class="trailer trailer-mulherMaravilha">
+              <img
+                loading="lazy"
+                class="img-exit_trailer"
+                src="./../assets/img/GERAL/SAÍDA.webp"
+                alt="imagem botão SAÍDA"
+              />
+
+              <video
+                id="videoTrailer"
+                src="../assets/VIDEOS/SUPER-HEROIS/Mulher-Maravilha.mp4"
+                poster="../assets/img/cinema/Mulher-Maravilha2.webp"
+                controls
+                loop
+                muted
+              ></video>
+              <abbr title="Proibido Filmar!">
+                <img
+                  loading="lazy"
+                  class="img-proibido"
+                  src="../assets/img/cinema/proibido.webp"
+                  alt="imagem de proibido filmar"
+                />
+              </abbr>
+            </section>
+            <!------------------SESSÃO SINOPSE------------>
+            <figcaption class="box-sinopse sinopse-mulher_maravilha">
+              <div class="box-btn_span">
+                <button class="fechar fecharX">X</button>
+                <span>SINOPSE</span>
+              </div>
+              <p class="texto-sinopse">
+                Mulher-Maravilha: Diana, princesa das Amazonas, deixa sua ilha
+                paradisíaca para lutar na Primeira Guerra Mundial. Ao lado do
+                piloto Steve Trevor, ela descobre seus verdadeiros poderes e seu
+                propósito como defensora da humanidade.
+              </p>
+              <div class="box-btn_cards">
+                <button class="btn-card btn-avaliar fosco" disabled>
+                  AVALIAR
+                </button>
+                <button class="btn-card btn-trailer">TRAILER</button>
+                <button class="btn-card btn-open_editar">EDITAR</button>
+              </div>
+            </figcaption>
+
+            <!----------------SESSÃO AVALIAÇÃO- MULHER MARAVILHA-- 003-------------->
+            <section class="section-star section-star_mulherMaravilha">
+              <div class="container">
+                <div class="post">
+                  <p class="text">Obrigado por Avaliar!</p>
+                </div>
+                <div class="star-widget">
+                  <input
+                    type="radio"
+                    name="mulher-maravilha"
+                    id="star-mulherMaravilha_5"
+                  />
+                  <label
+                    for="star-mulherMaravilha_5"
+                    class="fas fa-star"
+                  ></label>
+
+                  <input
+                    type="radio"
+                    name="mulher-maravilha"
+                    id="star-mulherMaravilha_4"
+                  />
+                  <label
+                    for="star-mulherMaravilha_4"
+                    class="fas fa-star"
+                  ></label>
+
+                  <input
+                    type="radio"
+                    name="mulher-maravilha"
+                    id="star-mulherMaravilha_3"
+                  />
+                  <label
+                    for="star-mulherMaravilha_3"
+                    class="fas fa-star"
+                  ></label>
+
+                  <input
+                    type="radio"
+                    name="mulher-maravilha"
+                    id="star-mulherMaravilha_2"
+                  />
+                  <label
+                    for="star-mulherMaravilha_2"
+                    class="fas fa-star"
+                  ></label>
+
+                  <input
+                    type="radio"
+                    name="mulher-maravilha"
+                    id="star-mulherMaravilha_1"
+                  />
+                  <label
+                    for="star-mulherMaravilha_1"
+                    class="fas fa-star"
+                  ></label>
+                  <form action="#" method="#">
+                    <header></header>
+                    <div class="textarea">
+                      <textarea
+                        cols="10"
+                        placeholder="Descreva sua experiência..."
+                      ></textarea>
+                    </div>
+                    <div class="btn">
+                      <button class="btn-submit" type="submit">Postar</button>
+                      <button class="btn-editar" type="submit">Editar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </figure>
+
+          <!----CARD HOMEM DE FERRO---------->
+          <figure class="cards" data-filme="Homem de Ferro">
+            <img
+              loading="lazy"
+              class="img-card"
+              src="../assets/img/CAPA/SUPER HEROIS/homem-ferro.jpg"
+              alt="imagem de homem de ferro 3"
+            />
+            <!--------------TRAILER HOMEM DE FERRO---------->
+            <section class="trailer trailer-homemFerro">
+              <img
+                loading="lazy"
+                class="img-exit_trailer"
+                src="./../assets/img/GERAL/SAÍDA.webp"
+                alt="imagem botão SAÍDA"
+              />
+
+              <video
+                id="videoTrailer"
+                src="../assets/VIDEOS/SUPER-HEROIS/Homem de Ferro 3.mp4"
+                poster="../assets/img/cinema/homem-de-ferrro2.webp"
+                controls
+                loop
+                muted
+              ></video>
+              <abbr title="Proibido Filmar!">
+                <img
+                  loading="lazy"
+                  class="img-proibido"
+                  src="../assets/img/cinema/proibido.webp"
+                  alt="imagem de proibido filmar"
+                />
+              </abbr>
+            </section>
+            <!------------------SESSÃO SINOPSE------------>
+            <figcaption class="box-sinopse sinopse-homemFerro">
+              <div class="box-btn_span">
+                <button class="fechar fecharX">X</button>
+                <span>SINOPSE</span>
+              </div>
+              <p class="texto-sinopse">
+                Homem de Ferro 3: Após os eventos de "Os Vingadores", Tony Stark
+                lida com crises de ansiedade enquanto investiga um novo inimigo,
+                o Mandarim. Sem sua armadura, ele precisa confiar em sua
+                inteligência para salvar o dia.
+              </p>
+              <div class="box-btn_cards">
+                <button class="btn-card btn-avaliar fosco" disabled>
+                  AVALIAR
+                </button>
+                <button class="btn-card btn-trailer">TRAILER</button>
+                <button class="btn-card btn-open_editar">EDITAR</button>
+              </div>
+            </figcaption>
+            <!----------------SESSÃO AVALIAÇÃO---HOMEM DE FERRO-- 004-------------->
+
+            <section class="section-star section-star_homemFerro">
+              <div class="container">
+                <div class="post">
+                  <p class="text">Obrigado por Avaliar!</p>
+                </div>
+                <div class="star-widget">
+                  <input
+                    type="radio"
+                    name="homemFerro"
+                    id="star-homemFerro_5"
+                  />
+                  <label for="star-homemFerro_5" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="homemFerro"
+                    id="star-homemFerro_4"
+                  />
+                  <label for="star-homemFerro_4" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="homemFerro"
+                    id="star-homemFerro_3"
+                  />
+                  <label for="star-homemFerro_3" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="homemFerro"
+                    id="star-homemFerro_2"
+                  />
+                  <label for="star-homemFerro_2" class="fas fa-star"></label>
+                  <input
+                    type="radio"
+                    name="homemFerro"
+                    id="star-homemFerro_1"
+                  />
+                  <label for="star-homemFerro_1" class="fas fa-star"></label>
+                  <form action="#" method="#">
+                    <header></header>
+                    <div class="textarea">
+                      <textarea
+                        cols="10"
+                        placeholder="Descreva sua experiência..."
+                      ></textarea>
+                    </div>
+                    <div class="btn">
+                      <button class="btn-submit" type="submit">Postar</button>
+                      <button class="btn-editar" type="submit">Editar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- SESSÃO DATA BASE AVALIAÇÃO-------- -->
+    <section class="data-base_avaliar" id="minhas-avaliacoes">
+      <div class="dataBase_star">
+        <img
+          class="dataBase_icone"
+          src="../assets/img/GERAL/icons8-banco-de-dados.gif"
+          alt="icone de banco de dados"
+        />
+        <h2>Demo DataBase Star</h2>
+        <img
+          class="dataBase_icone"
+          src="../assets/img/GERAL/estrela.gif"
+          alt="icone de banco de dados"
+        />
+      </div>
+
+      <div class="box-star_dataBase text-dataBase_star"></div>
+    </section>
+
+    <footer>
+      <div class="box-components">
+        <a href="./index.html">
+          <img
+            loading="lazy"
+            class="logoEO"
+            src="./../assets/img/GERAL/LOGO-EO.webp"
+            alt="imagem logo letra EO"
+          />
+        </a>
+        <div class="boxLinks">
+          <a href="https://github.com/ErikaEstudos">
+            <img
+              loading="lazy"
+              class="gitHub links"
+              src="./../assets/img/GERAL/Hub.webp"
+              alt="imagem hub"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/erika-oliveira-11302432a/">
+            <img
+              loading="lazy"
+              class="linkedin links"
+              src="./../assets/img/GERAL/linkedin.webp"
+              alt="imagem linkedin"
+            />
+          </a>
+        </div>
+        <div class="box-email">
+          <a
+            href="mailto:erikaestudosaraujo@gmail.com?subject=Olá, vim pelo Cine Erika"
+          >
+            <address class="email">erika.aoliveiracorrea@gmail.com</address>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/login.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/star.js"></script>
+  </body>
+</html>

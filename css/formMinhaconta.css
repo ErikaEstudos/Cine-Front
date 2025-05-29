@@ -1,0 +1,236 @@
+/*FORMULÁRIO MINHA CONTA*/
+.section-popup_Conta {
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+}
+
+.section-popup_Conta .box-form_conta {
+  max-width: 400px;
+  width: 100%;
+  height: 335px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: start;
+  background: #1a1818;
+  border-radius: 12px;
+  border: solid 3px red;
+  overflow: hidden;
+  transition: all 0.6s;
+}
+body.ativar .box-form_conta {
+  background: #f22c2c;
+  border: 3px solid transparent;
+}
+.box-form_conta .text-meus_dados {
+  font-size: 25px;
+  font-weight: 600;
+  cursor: default;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: cyan;
+  background-color: black;
+  box-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan;
+}
+
+body.ativar .text-meus_dados {
+  color: #fff;
+  opacity: 0.7;
+  box-shadow: none;
+  background: #1a1818;
+}
+
+.form-conta {
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: end;
+}
+
+.form-senha .img-olho {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20%;
+  right: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.form-senha .img-olho.seeing {
+  box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+}
+
+.form-conta label,
+.form-senha label {
+  color: #fff;
+  padding: 5px;
+}
+.form-conta input,
+.form-senha input {
+  width: 100%;
+  height: 25px;
+  outline: none;
+  text-overflow: ellipsis;
+  border: 2px solid transparent;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.form-conta input:focus,
+.form-senha input:focus {
+  color: #fff;
+  border: 2px solid cyan;
+  background-color: #333;
+  box-shadow: 0 0 3px cyan;
+}
+
+.box-btns_formConta {
+  margin: 15px auto 0;
+}
+
+.box-btns_formConta button {
+  width: 200px;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eb3156;
+  color: #fff;
+  border: none;
+  transition: 300ms ease-in-out;
+}
+
+.btns-form_conta button:hover {
+  transform: scale(1.05);
+  color: cyan;
+}
+
+.btn-fechar_conta {
+  width: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.btn-fechar_conta:hover {
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan;
+}
+
+/*FORMULÁRIO ALTERAR SENHA*/
+.box-form_conta .box-form_senha {
+  max-width: 400px;
+  width: 100%;
+  height: 335px;
+  padding: 10px 15px;
+  position: absolute;
+  left: 50%;
+  bottom: -132%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border: 3px solid cyan;
+  transition: all 0.6s ease;
+  background: #f22c2c;
+}
+
+.box-form_senha.ativar {
+  bottom: -52%;
+  border-radius: 12px;
+  justify-content: center;
+  border: 3px solid transparent;
+  background: #1a1818 !important;
+}
+
+.box-form_senha .text-alterar_senha {
+  padding: 3px 10px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.box-form_senha .text-alterar_senha:hover {
+  color: cyan;
+  background-color: #c0392b;
+}
+
+.box-form_senha.ativar .text-alterar_senha {
+  color: cyan;
+  cursor: default;
+  border: 2px solid white;
+  background-color: black;
+  box-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan;
+}
+
+.box-form_senha .form-senha {
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.form-senha .box-btn_senha {
+  width: 100%;
+  height: 25px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-btn_senha .btns-senha {
+  height: 100%;
+  width: 120px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eb3156;
+  color: #fff;
+  border: none;
+  transition: 200ms ease-in-out;
+}
+.box-btn_senha .btns-senha:hover {
+  transform: scale(1.05);
+  color: cyan;
+}
