@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   height: auto;
-  background-image: url(../assets/img/cinema/login-banner.webp);
+  background-image: url(/assets/img/cinema/login-banner.webp);
   background-size: cover;
 }
 .box-components {

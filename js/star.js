@@ -1,3 +1,5 @@
+const BACKEND_URL = "cine-back-gzmysutkp-erika-oliveiras-projects.vercel.app";
+
 /*---SECTION CARDS--*/
 const cards = document.querySelectorAll(".cards");
 const body = document.querySelector("body");
@@ -46,7 +48,7 @@ cards.forEach((card) => {
 
     try {
       const resposta = await fetch(
-        `http://localhost:3000/usuarios/avaliacoes?filme=${nomeFilme}&usuarioId=${usuarioId}`
+        `${BACKEND_URL}/usuarios/avaliacoes?filme=${nomeFilme}&usuarioId=${usuarioId}`
       );
       const dados = await resposta.json();
 
@@ -159,8 +161,8 @@ cards.forEach((card) => {
     }
 
     const url = avaliacaoExistenteId
-      ? `http://localhost:3000/usuarios/avaliacoes/${avaliacaoExistenteId}`
-      : "http://localhost:3000/usuarios/avaliacoes";
+      ? `${BACKEND_URL}/usuarios/avaliacoes/${avaliacaoExistenteId}`
+      : `${BACKEND_URL}/usuarios/avaliacoes`;
     const method = avaliacaoExistenteId ? "PUT" : "POST";
 
     const bodyPayload = {
@@ -215,7 +217,7 @@ cards.forEach((card) => {
     const usuarioId = localStorage.getItem("usuarioId");
     try {
       const resposta = await fetch(
-        `http://localhost:3000/usuarios/avaliacoes?filme=${nomeFilme}&usuarioId=${usuarioId}`
+        `${BACKEND_URL}/usuarios/avaliacoes?filme=${nomeFilme}&usuarioId=${usuarioId}`
       );
       const dados = await resposta.json();
 
@@ -265,7 +267,7 @@ async function exibirMinhasAvaliacoes() {
 
   try {
     const resposta = await fetch(
-      `http://localhost:3000/usuarios/avaliacoes/usuario/${usuarioId}`
+      `${BACKEND_URL}/usuarios/avaliacoes/usuario/${usuarioId}`
     );
     const avaliacoes = await resposta.json();
 
@@ -319,7 +321,7 @@ function adicionarListenersRemover() {
       if (confirm("Tem certeza que deseja remover esta avaliação?")) {
         try {
           const resposta = await fetch(
-            `http://localhost:3000/usuarios/avaliacoes/${avaliacaoId}`,
+            `${BACKEND_URL}/usuarios/avaliacoes/${avaliacaoId}`,
             {
               method: "DELETE",
             }

@@ -105,12 +105,12 @@ formLoginSignup.addEventListener("submit", async function (event) {
     checkbox.checked = false;
     inputSignup.type = "password";
     olhoSignup.classList.remove("seeing");
-    olhoSignup.src = "../assets/img/GERAL/olho-fechado.webp";
+    olhoSignup.src = "/assets/img/GERAL/olho-fechado.webp";
     // Limpa formulário de login também
     formLogin.reset();
     inputLogin.type = "password";
     olhoLogin.classList.remove("seeing");
-    olhoLogin.src = "../assets/img/GERAL/olho-fechado.webp";
+    olhoLogin.src = "/assets/img/GERAL/olho-fechado.webp";
   }, 2500);
 
   // Envio dos dados para o backend
@@ -184,12 +184,12 @@ btnClose.addEventListener("click", function () {
   checkbox.checked = false; // Desmarca o checkbox
   inputSignup.type = "password";
   olhoSignup.classList.remove("seeing");
-  olhoSignup.src = "../assets/img/GERAL/olho-fechado.webp";
+  olhoSignup.src = "/assets/img/GERAL/olho-fechado.webp";
   // RESET do formulário de login
   formLogin.reset(); // Limpa o formulário de login
   inputLogin.type = "password";
   olhoLogin.classList.remove("seeing");
-  olhoLogin.src = "../assets/img/GERAL/olho-fechado.webp";
+  olhoLogin.src = "/assets/img/GERAL/olho-fechado.webp";
 });
 
 //Evento de clique no botão de fechar do formulário de conta
@@ -208,7 +208,7 @@ closeFormConta.addEventListener("click", () => {
   });
   // Reset de imagem de olho no (FORM DE TROCA DE SENHA)!
   olho.classList.remove("seeing");
-  olho.src = "../assets/img/GERAL/olho-fechado.webp";
+  olho.src = "/assets/img/GERAL/olho-fechado.webp";
 });
 
 // Função para carregar e exibir a lista de usuários
@@ -411,7 +411,7 @@ document
           inputs.forEach((input) => {
             input.type = "password";
             // Reset da imagem do olho
-            olho.src = "../assets/img/GERAL/olho-fechado.webp";
+            olho.src = "/assets/img/GERAL/olho-fechado.webp";
             olho.classList.remove("seeing");
           });
 
@@ -442,11 +442,11 @@ olhoSignup.addEventListener("click", () => {
   if (inputSignup.type === "password") {
     inputSignup.type = "text";
     olhoSignup.classList.add("seeing");
-    olhoSignup.src = "../assets/img/GERAL/olho-aberto.webp";
+    olhoSignup.src = "/assets/img/GERAL/olho-aberto.webp";
   } else {
     inputSignup.type = "password";
     olhoSignup.classList.remove("seeing");
-    olhoSignup.src = "../assets/img/GERAL/olho-fechado.webp";
+    olhoSignup.src = "/assets/img/GERAL/olho-fechado.webp";
   }
 });
 //LOGIN
@@ -456,11 +456,11 @@ olhoLogin.addEventListener("click", () => {
   if (inputLogin.type === "password") {
     inputLogin.type = "text";
     olhoLogin.classList.add("seeing");
-    olhoLogin.src = "../assets/img/GERAL/olho-aberto.webp";
+    olhoLogin.src = "/assets/img/GERAL/olho-aberto.webp";
   } else {
     inputLogin.type = "password";
     olhoLogin.classList.remove("seeing");
-    olhoLogin.src = "../assets/img/GERAL/olho-fechado.webp";
+    olhoLogin.src = "/assets/img/GERAL/olho-fechado.webp";
   }
 });
 //TROCA DE SENHA
@@ -472,12 +472,12 @@ olho.addEventListener("click", () => {
       input.type = "text";
       olho.classList.add("seeing");
     });
-    olho.src = "../assets/img/GERAL/olho-aberto.webp";
+    olho.src = "/assets/img/GERAL/olho-aberto.webp";
   } else {
     inputsToggle.forEach((input) => {
       input.type = "password";
       olho.classList.remove("seeing");
     });
-    olho.src = "../assets/img/GERAL/olho-fechado.webp";
+    olho.src = "/assets/img/GERAL/olho-fechado.webp";
   }
 });
