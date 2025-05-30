@@ -1,5 +1,3 @@
-const BACKEND_URL = "cine-back-gzmysutkp-erika-oliveiras-projects.vercel.app";
-
 // Seleção de Elementos do DOM
 const btnLogin = document.querySelector(".btn-login");
 const tagBody = document.querySelector("body");

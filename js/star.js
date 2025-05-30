@@ -1,5 +1,3 @@
-const BACKEND_URL = "cine-back-gzmysutkp-erika-oliveiras-projects.vercel.app";
-
 /*---SECTION CARDS--*/
 const cards = document.querySelectorAll(".cards");
 const body = document.querySelector("body");
