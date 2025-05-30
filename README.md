@@ -44,7 +44,7 @@ O **Cine Erika** permite aos usuários:
 1. **Clone este repositório:**
 
    ```bash
-   git clone https://github.com/ErikaEstudos/Cine-Front.git
+   git clone https://github.com/erikaoliveiracorrea/Cine-Front.git
    ```
 
 ## Agradecimento:
