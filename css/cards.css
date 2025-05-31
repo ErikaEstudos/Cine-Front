@@ -22,9 +22,8 @@
 }
 
 .box-title_main .main-title {
-  width: 100%;
   position: absolute;
-  right: -95%;
+  left: 95%;
   bottom: 15%;
   color: #cf0b0b;
   letter-spacing: 10px;
@@ -36,12 +35,13 @@
   -webkit-text-stroke: 0.5px white;
   animation: title1 20s linear infinite;
 }
+
 @keyframes title1 {
   fron {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-225%);
+    transform: translateX(-160%);
   }
 }
 
@@ -525,6 +525,16 @@ form .btn button:hover {
   }
   .box-cards .cards01 {
     max-width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  @keyframes title1 {
+    fron {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-130%);
+    }
   }
 }
 @media screen and (max-width: 610px) {
