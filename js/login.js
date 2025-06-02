@@ -160,7 +160,7 @@ formLogin.addEventListener("submit", async function (e) {
       localStorage.setItem("usuarioLogado", JSON.stringify(data.usuario)); // Armazena os dados do usuário no localStorage
       localStorage.setItem("usuarioId", data.usuario._id); // Armazena o ID do usuário
       // Redireciona para a página principal
-      window.location.href = "/html/index.html";
+      window.location.href = "./index.html";
     } else {
       // Erro no login
       alert(data.mensagem); // Exibe a mensagem de erro do backend
