@@ -303,8 +303,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Evento de click Minha Conta
-minhaConta.addEventListener("click", () => {
+minhaConta.addEventListener("click", (event) => {
+  event.stopPropagation(); // Impede que o clique se propague para o document
   minhaConta.classList.toggle("active");
+});
+// Evento de clique em qualquer parte do documento
+document.addEventListener("click", () => {
+  minhaConta.classList.remove("active");
 });
 
 // Evento de clique no botão Editar Conta
